@@ -1,0 +1,149 @@
+CREATE TABLE pacientet(
+	pacientiid int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    emri varchar(20) NOT NULL,
+    mbiemri varchar(20) NOT NULL,
+    telefoni varchar(20) NOT NULL,
+    email varchar(30) NOT NULL,
+    fjalekalimi varchar(30) NOT NULL,
+    qyteti varchar(30),
+    dataelindjes date
+);
+
+CREATE TABLE mjeket(
+    mjekuid int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    emri varchar(20) NOT NULL,
+    mbiemri varchar(20) NOT NULL,
+    telefoni varchar(20) NOT NULL,
+    email varchar(30) NOT NULL,
+    fjalekalimi varchar(30) NOT NULL,
+    qyteti varchar(30),
+    dataelindjes date,
+    roli bit
+);
+
+CREATE TABLE infermieret(
+    infermieriid int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    emri varchar(20) NOT NULL,
+    mbiemri varchar(20) NOT NULL,
+    telefoni varchar(20) NOT NULL,
+    email varchar(30) NOT NULL,
+    fjalekalimi varchar(30) NOT NULL,
+    qyteti varchar(30),
+    dataelindjes date,
+    roli bit
+);
+
+CREATE TABLE analiza(
+	analizaid int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        infermieriid int(11) NOT NULL,
+    FOREIGN KEY (infermieriid) REFERENCES infermieret (infermieriid)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE,
+    emri varchar(20) NOT NULL,
+    qmimi decimal(5,2) NOT NULL
+);
+
+CREATE TABLE kategorit(
+	kategoriaid int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    emri varchar(20) NOT NULL,
+    qmimi decimal(5,2) NOT NULL
+);
+
+CREATE TABLE kontrollat(
+	kontrollaid int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    pacientiid int(11) NOT NULL,
+    mjekuid int(11) NOT NULL,
+    analizaid int(11) NOT NULL,
+    kategoriaid int(11) NOT NULL,
+    FOREIGN KEY (pacientiid) REFERENCES pacientet(pacientiid)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+    FOREIGN KEY (mjekuid) REFERENCES mjeket(mjekuid)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+    FOREIGN KEY (analizaid) REFERENCES analiza(analizaid)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+    FOREIGN KEY (kategoriaid) REFERENCES kategorit(kategoriaid)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+    dataekontrolles date NOT NULL
+);
+
+CREATE TABLE operacionet(
+	operacioniid int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    pacientiid int(11) NOT NULL,
+    mjekuid int(11) NOT NULL,
+    FOREIGN KEY (pacientiid) REFERENCES pacientet(pacientiid)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+    FOREIGN KEY (mjekuid) REFERENCES mjeket(mjekuid)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+    dataeoperaionit date NOT NULL
+);
+ALTER TABLE kontrollat ADD COLUMN emri varchar(50) NOT NULL
+ALTER TABLE operacionet ADD COLUMN emri varchar(50) NOT NULL
+ALTER TABLE kontrollat ADD COLUMN pershkrimi varchar(100)
+
+-----------------------------------------------------------------------------------------------
+INSERT INTO pacientet(emri,mbiemri,telefoni,email,fjalekalimi,qyteti,dataelindjes) VALUES 
+('Odesa','Buzhala','044490490','odesa@gmail.com','odesa1','Prishtine','1983-01-31'),
+('Anida','Ramadani','045888999','anida@gmail.com','anida1','Tetove','1979-05-21'),
+('Eljesa','Shabani','044110110','eljesa@gmail.com','eljesa1','Gjakove','1960-07-15'),
+('Bujar','Avdyli','044111102','bujar@gmail.com','bujar1','Ferizaj','2000-04-01'),
+('Jonida','Olluri','044221221','jonida@gmail.com','jonida1','Lipjan','1977-11-25'),
+('Erza','Berisha','045987987','erza@gmail.com','erza1','Lipjan','1992-06-18'),
+('Erisa','Matoshi','043986986','erisa@gmail.com','erisa1','Prishtine','1988-02-09'),
+('Merjeme','Bajrami','049985985','merjeme@gmail.com','merjeme1','Ferizaj','1996-03-26'),
+('Yllza','Kryeziu','049984984','yllza@gmail.com','yllza1','Gjakove','1990-10-12');
+
+INSERT INTO infermieret(emri,mbiemri,telefoni,email,fjalekalimi,qyteti,roli) VALUES 
+('Melisa','Imeri','043990112','melisa@gmail.com','melisa1','Ferizaj',0),
+('Gent','Demelezi','044888222','gent@gmail.com','gent1','Prishtine',0),
+('Erton','Imeri','043181900','erton@gmail.com','erton1','Ferizaj',0),
+('Renea','Shahini','045983289','renea@gmail.com','renea1','Prishtina',0),
+('Florent','Avdyli','044332223','florent@gmail.com','florent1','Prizren',0);
+
+INSERT INTO mjeket(emri,mbiemri,telefoni,email,fjalekalimi,qyteti,roli) VALUES 
+('Fiona','Imeri','044121281','fiona@gmail.com','fiona1','Ferizaj',1),
+('Edona','Hajdini','045921211','edona@gmail.com','edona1','Ferizaj',1),
+('Fjolla','Tmava','045981129','fjolla@gmail.com','fjolla1','Ferizaj',1),
+('Ema','Imeri','045555771','ema@gmail.com','ema1','Ferizaj',1);
+
+INSERT INTO analiza(infermieriid,emri,qmimi) VALUES 
+(5,'Analiza e gjakut','115'),
+(3,'Analiza e gjakut','115'),
+(2,'Analiza e gjakut','115'),
+(1,'Analiza e gjakut','115'),
+(4,'Analiza e gjakut','115');
+
+INSERT INTO kategorit(emri,qmimi) VALUES
+('Kategoria 1','30'),
+('Kategoria 2','50'),
+('Kategoria 3','40');
+
+INSERT INTO kontrollat (pacientiid,mjekuid,analizaid,kategoriaid,emri,dataekontrolles) VALUES
+(2,1,3,1,'Kontrolle e pergjithshme','2023-05-13'),
+(4,2,4,1,'Kontrolle e pergjithshme','2023-04-25'),
+(6,3,2,1,'Kontrolle e pergjithshme','2023-03-19'),
+(8,4,1,1,'Kontrolle e pergjithshme','2022-12-17'),
+(1,4,2,1,'Kontrolle e pergjithshme','2023-05-16'),
+(3,3,4,1,'Kontrolle e pergjithshme','2023-06-02'),
+(5,2,5,1,'Kontrolle e pergjithshme','2022-12-13'),
+(7,1,5,1,'Kontrolle e pergjithshme','2022-12-11'),
+(9,1,2,1,'Kontrolle e pergjithshme','2023-04-24'),
+(4,2,4,3,'Testi i stresit','2023-08-31'),
+(5,3,2,2,'Echokardiograma','2022-12-20'),
+(1,4,1,3,'Testi i stresit','2023-12-09'),
+(9,4,1,3,'Testi i stresit','2023-09-22'),
+(8,3,4,2,'Echokardiograma','2022-12-25'),
+(2,2,2,2,'Elektrokardiograma','2023-07-30');
+
+INSERT INTO operacionet(pacientiid,mjekuid,emri,dataeoperacionit) VALUES
+(2,4,'CT Angiografi Koronare','2023-12-17'),
+(5,3,'Kateterizimi kardiak','2023-03-05'),
+(7,2,'Ndërhyrja kardiake','2023-07-12'),
+(3,1,'Kateterizimi kardiak','2023-08-28'),
+(8,2,'Kateterizimi kardiak','2023-02-24'),
+(4,3,'Ndërhyrja kardiake','2023-09-07');

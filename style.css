@@ -1,0 +1,560 @@
+body{
+    background-color:#DFE6EB;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/*header part*/
+#header{
+    width: 100%;
+}
+#nav{
+    width: 90%;
+}
+#nav img{
+    width: 24%;
+    height: 35%;
+    float: left;
+}
+.lista{
+    list-style-type: none;
+    float: right;
+    margin-top: 25px;
+    position: absolute;
+    right: 10px;
+}
+.lista li{
+    display: inline;
+    border-right: 1px solid darkblue;
+    margin: 5px;
+    padding: 10px 0;
+}
+.lista li:last-child{
+    border: 0;
+}
+.lista li a{
+    text-decoration: none;
+    font-size: 17px;
+    padding: 10px;
+    text-align: center;
+    color: #3082C2;
+}
+.lista li a:hover{
+    text-decoration: underline;
+    color: darkblue;
+}
+.lista li:first-child a:hover, .lista li:last-child a:hover{
+    background-color: darkblue;
+    color: #DFE6EB;
+    text-decoration: none; 
+}
+#pjesa2{
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 60%;
+    margin-top: 20px;
+    margin-left: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #4682b4;
+}
+#pjesa2 img{
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+#pjesa2 h3{
+    float: right;
+    position: absolute;
+    right: 34%;
+    color:#191970;
+    margin-top: 35px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+#pjesa2 h1{
+    float: right;
+    position: absolute;
+    right: 20%;
+    margin-top: 9%;
+    font-size: 43px;
+    color: #0c0c50;
+}
+#pjesa2 p{
+    float: right;
+    position: absolute;
+    right: 9%;
+    margin-top: 22%;
+    font-size: 20px;
+    color:#191970;
+}
+#pjesa2 p a{
+    text-decoration:none;
+    color:#191970;
+}
+/* end of header part*/
+
+/* main part */
+.main{
+    width: 100%;
+}
+.shtese{
+    position: absolute;
+    top: 11%;
+    width: 40%;
+    left: 8%;
+    height: 80%;
+    margin-top: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.shtese img{
+    float: left;
+    width: 100%;
+    height: 65%;
+}
+#lokacioni, #profiliPergjithshem, #specialistet{
+    margin-top: 73%;
+    border: 1px solid grey;
+    box-shadow: 10px 10px grey;
+    background-color: white;
+    padding: 7%;
+}
+#lokacioni h1, #profiliPergjithshem h1, #specialistet h1{
+    text-transform: uppercase;
+    color: darkblue;
+}
+#lokacioni p, #profiliPergjithshem p, #specialistet p{
+    padding-top: 5%;
+    text-indent:35px;
+    text-align: justify;
+}
+.shtese2{
+    float: right;
+    position: absolute;
+    width: 40%;
+    top: 14.2%;
+    right: 5%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#profiliPergjithshem, #specialistet{
+    margin-top: 0;
+}
+#specialistet{
+    margin-top: 10%;
+}
+
+.shtese3{
+    position: absolute;
+    top: 137%;
+    width: 91%;
+    height: 100%;
+    padding: 2% 4%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.shtese3 h1{
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #483d8b;
+}
+#ekg,#echo,#apb,#vitalSigns,#pulseOximeter{
+    margin-top: 5%;
+    height: 37%;
+}
+#ekg:hover, #echo:hover, #apb:hover, #vitalSigns:hover, #pulseOximeter:hover{
+    margin-top: 5%;
+    height: 37%;
+    background-color: white;
+}
+#ekg img, #echo img, #apb img, #vitalSigns img, #pulseOximeter img{
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+#ekg:hover img, #echo:hover img, #apb:hover img, #vitalSigns:hover img, #pulseOximeter:hover img{
+    float: right;
+    width: 20%;
+    height: 100%;
+}
+#ekg h2, #echo h2, #apb h2, #vitalSigns h2,#pulseOximeter  h2{
+    float: right;
+    position: absolute;
+    right: 30%;
+    color: darkblue;
+}
+#ekg:hover h2, #echo:hover h2, #apb:hover h2, #vitalSigns:hover h2, #pulseOximeter:hover  h2{
+    float: left;
+    position: absolute;
+    left: 30%;
+    color: darkblue;
+}
+#ekg h2{ right: 25%;} #ekg:hover h2{ left: 25%;}
+#apb h2{ right: 21%;} #apb:hover h2{ left: 21%;}
+#pulseOximeter  h2{ right: 34%;} #pulseOximeter:hover  h2{ left: 34%;}
+#ekg p, #echo p, #apb p, #vitalSigns p, #pulseOximeter p{
+    margin: 6%;
+    text-align: justify;
+    width: 68%;
+    float: right;
+    line-height: 25px;
+    font-size: 20px;
+}
+#ekg:hover p, #echo:hover p, #apb:hover p, #vitalSigns:hover p, #pulseOximeter:hover p{
+    margin: 6%;
+    text-align: justify;
+    width: 68%;
+    float: left;
+    line-height: 25px;
+    font-size: 20px;
+}
+
+#sherbimet{
+    width: 90%;
+    position: absolute;
+    top: 73.1%;
+    left: 7%;
+    height: 70%;
+}
+#sherbimet h1{
+    text-align: center;
+    margin-top: 8%;
+    text-transform: capitalize;
+    font-size: 30px;
+    color: #483d8b;
+}
+#firstArticle, #secondArticle, #thirdArticle{
+    position: absolute;
+    width: 22%;
+    height: 35%;
+    top: 40%;
+    padding: 2%;
+}
+#secondArticle{ left: 35%;}
+#thirdArticle{ left: 70%;}
+#firstArticle:hover, #secondArticle:hover, #thirdArticle:hover{
+    position: absolute;
+    width: 22%;
+    padding: 2%;
+    background-color: white;
+    box-shadow: 10px 10px grey;
+}
+#firstArticle h2, #secondArticle h2, #thirdArticle h2{
+    color: #01ACED;
+    text-align: center;
+}
+#firstArticle p, #secondArticle p, #thirdArticle p{
+    color: #483d8b;
+    text-align: justify;
+}
+#firstArticle:hover h2, #secondArticle:hover h2, #thirdArticle:hover h2{ color: #0c0c50;}
+#firstArticle:hover p, #secondArticle:hover p, #thirdArticle:hover p{ color: #01ACED;}
+#vizita{
+    position: absolute;
+    top: 145%;
+    padding: 0 40px;
+    background-color: #4682b4;
+}
+#vizita h1{
+    color: #0c0c50;
+    text-transform: uppercase;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+#vizita p{
+    text-align: justify;
+    width: 70%;
+    margin-left: 4%;
+    text-indent: 6%;
+    font-size: 20px;
+    line-height: 30px;
+}
+#vizita ul{
+    font-size: 20px;
+    width: 80%;
+    text-align: justify;
+    list-style-type:none;
+    line-height: 30px;
+    margin-bottom: 5%;
+}
+#vizita ul li::before {
+    content: "\2022"; 
+    color: white; 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 30px; 
+}
+/* end of main part*/
+
+/*tabela per te dhena*/
+#tabela,#tabela1{
+    position: absolute;
+    top: 80%;
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    background-color: #dadfe0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#tabela1{ left: 5%; right: 5%; width: 90%;}
+#tabela table, #tabela1 table{ padding: 10% 7%;}
+#pacientet{ font-size: 20px;}
+#pacientet thead th{ padding: 10px;}
+#pacientet tbody td{
+    padding: 10px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-spacing: 0;
+    color: darkblue;
+}
+#pacientet tbody td a{
+    text-decoration: none;
+    color: darkblue;
+}
+#modifikimi{
+    background-color: #dadfe0;
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    width: 70%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 10%;
+}
+#pacienti,#infermieri{padding-left: 30px; padding-top: 30px;}
+#analiza{ padding: 60px;}
+#kontrolla{ padding: 55px;}
+#pacienti label,#infermieri label, #analiza label,#kontrolla label{
+    font-size: 20px;
+    margin: 30px;
+    margin-bottom: 0;
+    text-align: left;
+}
+#pacienti #mbiemri1,#infermieri #mbiemri1{ margin: 38%;} 
+#pacienti #email1,#infermieri #email1{ margin: 35%;}
+#pacienti #data1,#infermieri #data1,#kontrolla #data1{ margin: 36%;} 
+#analiza #qmimi1{ margin: 230px;}
+
+#pacienti input[type='text'],#pacienti input[type='email'],#pacienti input[type='password'],
+#pacienti input[type='date'],
+#infermieri input[type='text'],#infermieri input[type='email'],#infermieri input[type='password'],
+#analiza input[type='text'],
+#kontrolla input[type='date'], #kontrolla select{
+    background-color: #DFE6EB;
+    border: none;
+    border-bottom: 1px solid #3082C2;
+    padding: 20px;
+    font-size: 20px;
+    margin: 0 30px;
+    margin-bottom: 40px;
+    width: 35%;
+}
+#kontrolla #pershkrimi{ max-width: 30%;}
+#analiza input[type='text']{ margin: 8% 30px;}
+#pacienti input[type='submit'],#infermieri input[type='submit'],
+#analiza input[type='submit'],#kontrolla input[type='submit']{ 
+    background-color:#3082C2;
+    border: 1px solid #3082C2;
+    width: 40%;
+    font-size: 25px;
+    padding: 20px;
+    margin-left: 28px;
+}
+#shtoo{
+    float: right;
+    position: absolute;
+    right: 5%;
+    color: #483d8b;
+}
+#shtoo a{
+    text-decoration: none;
+    padding: 10px;
+}
+#shtoo a:hover{ background-color: #483d8b; color: #DFE6EB;}
+
+/*per mjeket */
+#stafi{
+    width: 100%;
+    position: absolute;
+    top: 90%;
+}
+#stafi h1{
+    text-align: center;
+    color: #483d8b;
+}
+#mjeku1,#mjeku2,#mjeku3,#mjeku4{
+    width: 30%;
+    height: 100px;
+    position: absolute;
+    left: 20%;
+    top: 200%;
+    background-color: white;
+    box-shadow: 10px 10px grey;
+    padding-bottom: 230px;
+}
+#mjeku2{ left: 60%;}
+#mjeku3{ top: 900%; left: 20%;}
+#mjeku4{ top: 900%; left: 60%;}
+#mjeku1 h3,#mjeku2 h3,#mjeku3 h3,#mjeku4 h3{
+    text-align: center;
+    font-size: 30px;
+    color: #3082C2;
+    padding: 40px 0;
+}
+#mjeku1 p,#mjeku2 p,#mjeku3 p,#mjeku4 p{
+    text-align: left;
+    font-size: 20px;
+    color: #3082C2;
+    margin-left: 40px;
+}
+
+
+/*per sign up*/
+#hyrja, #hyrja2{
+    background-color: #3082C2;
+    box-shadow: 10px 10px grey;
+    position: absolute;
+    top: 27%;
+    left: 10%;
+    width: 35%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#hyrja h1, #hyrja2 h1{
+    text-align: center;
+    font-size: 30px;
+    color: #DFE6EB;
+    text-shadow: 5px 5px grey;
+}
+#login{
+    text-align: center;
+    margin-bottom: 8%;
+}
+#login label{
+    font-size: 20px;
+    color: #DFE6EB; 
+}
+#login input[type='email'], #login input[type='password']{
+    background-color: #3082C2;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 20px;
+    font-size: 20px;
+    margin: 30px 0;
+}
+#login input[type='submit']{ 
+    background-color: white;
+    border: 1px solid #3082C2;
+    width: 40%;
+    font-size: 25px;
+    padding: 20px;
+    margin-left: 28px;
+    margin-top: 20px;
+}
+#login input[type='email']:hover, #login input[type='password']:hover {
+    background-color: white;
+    color: #0c0c50;
+}
+#hyrja2{
+    left: 56%;
+    height: 63%;
+    text-align: center;
+}
+#hyrja2 h1,#hyrja2 p{ margin-top: 10%;}
+#hyrja2 p{
+    margin-top: 25%;
+    color: #DFE6EB;
+    font-size: 20px;
+}
+#hyrja2 p a{
+    text-decoration:underline;
+    color: #191970;
+}
+#hyrja2 p a:hover{ color: white;}
+#regjistrimi{
+    position: absolute;
+    top: 22%;
+    left: 15%;
+    width: 70%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 10%;
+}
+#regjistrimi h1{
+    text-align: center;
+}
+#signup{ padding-left: 30px;}
+#signup legend{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+#signup label{
+    font-size: 20px;
+    margin: 30px;
+    margin-bottom: 0;
+    text-align: left;
+}
+#signup #mbiemri1{ margin: 38%;}
+#signup #email1{ margin: 35%;}
+#signup input[type='text'],#signup input[type='email'],#signup input[type='password']{
+    background-color: #DFE6EB;
+    border: none;
+    border-bottom: 1px solid #3082C2;
+    padding: 20px;
+    font-size: 20px;
+    margin: 0 30px;
+    margin-bottom: 40px;
+    width: 35%;
+}
+#signup input[type='submit']{ 
+    background-color:#3082C2;
+    border: 1px solid #3082C2;
+    width: 40%;
+    font-size: 25px;
+    padding: 20px;
+    margin-left: 28px;
+}
+#signup input[type='submit']:hover{ 
+    background-color: darkblue; 
+    color: #DFE6EB; 
+    width: 30%;
+    padding: 50px;    
+    border-radius: 50%;
+}
+/* footer part*/
+#footer{
+    position: absolute;
+    top: 270%;
+}
+#kontakti{
+    position: absolute;
+    width: 1300px;
+    height: 200px;
+}
+#kontakti img{
+    float: left;
+    width: 400px;
+    height: 150px;
+    margin-left: 150px;
+}
+#kontakti h1, #kontakti p{
+    float: right;
+    font-size: 20px;
+    color: #0c0c50;
+    position: absolute;
+    right: 30%;
+    font-size: 30px;
+}
+#kontakti p{
+   top: 40%;
+   font-size: 20px;
+   right: 20%;
+}
+#footer1,#footer2{
+    position: absolute;
+    top: 400%;
+    width: 1340px;
+    height: 230px;
+    background-color: #483d8b;
+    padding-top: 6%;
+}
+#footer1 h1, #footer1 p,#footer2 h1, #footer2 p{
+    color: white;
+}
+#footer2{ top: 200%;}
+/* end of footer part*/
