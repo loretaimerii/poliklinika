@@ -11,10 +11,12 @@
     <?php
         $pacientiid=$_SESSION['pacienti']['pacientiid'];
         if(isset($_POST['shto'])){
-            $mjeket=merrMjeket();
-            $mjeket=mysqli_fetch_assoc($mjeket);
-            $mjekuid=rand(1,count($mjeket)+1);
+            $mjeket=merrMjekRandom();
+            $mjeku=mysqli_fetch_assoc($mjeket);
+            $mjekuid= $mjeku['mjekuid'];
             shtoKontrolle1($pacientiid,$mjekuid,$_POST['emriKontrolles'],$_POST['dataekontrolles']);
+            header("Location: index.php");
+            exit();
         }
     ?>
     <section id="modifikimi">

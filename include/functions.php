@@ -91,6 +91,11 @@
         $sql = "SELECT mjekuid,emri,mbiemri,telefoni,email,qyteti,dataelindjes,roli FROM mjeket";
         return mysqli_query($dbConnection,$sql);
     }
+    function merrMjekRandom(){
+        global $dbConnection;
+        $sql = "SELECT mjekuid FROM mjeket ORDER BY RAND() LIMIT 1";
+        return mysqli_query($dbConnection,$sql);
+    }
     function merrMjekeId($mjekuid){
         global $dbConnection;
         $sql = "SELECT mjekuid,emri,mbiemri,telefoni,email,qyteti,dataelindjes,roli FROM mjeket WHERE mjekuid=$mjekuid";
