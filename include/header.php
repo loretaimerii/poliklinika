@@ -36,8 +36,14 @@
                         echo "<li><a href='profili.php?iid={$_SESSION['infermieri']['infermieriid']}'>Profili</a></li>";
                         echo "<li><a id='dalja' href='#'>Dalja</a></li>";
                     }
+                    if(
+                        !isset($_SESSION['pacienti']) &&
+                        !isset($_SESSION['mjeku']) &&
+                        !isset($_SESSION['infermieri'])
+                    ){
+                        echo "<li><a href='signin.php'>Sign In</a></li>";
+                    }
                 ?>
-                <li><a href="signin.php">Sign In</a></li>
             </ul>
         </nav>
        

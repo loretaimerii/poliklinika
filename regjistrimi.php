@@ -21,7 +21,7 @@
             <input type="email" name="email" id="email"><br>
             <label>Fjalekalimi</label><br>
             <input type="password" name="fjalekalimi" id="fjalekalimi">
-            <input type="submit" id="signup" value="Regjistrohu">
+            <input type="submit" name="signup" id="signup" value="Regjistrohu">
         </form>
     </section>
 <?php
